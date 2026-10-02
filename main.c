@@ -1,3 +1,42 @@
+/*
+Documentation: 
+Name: Veeramreddigari Seshu Kumar Reddy
+ID : 26012_108
+Start Date: 28-08-2026
+End Date:   29-09-2026
+Description: Image Steganography: Developed a C-based Image Steganography application that securely hides
+secret text data inside a BMP image using Least Significant Bit (LSB) encoding.
+Implemented encoding and decoding operations to embed and extract hidden messages
+while preserving the visual appearance of the original image.
+
+USAGE:
+Usage: ./a.out -e <src.bmp> <secret.txt> [stego.bmp]
+       ./a.out -d <stego.bmp> [output_file]
+
+SAMPLE O/P: FOR ENCODING.
+1. Encoding
+[SUCCESS] successfully validated
+[SUCCESS] Open file successfully
+width = 1024
+height = 768
+[SUCCESS] check capacity successfully done
+[SUCCESS] successfully copied bmp header
+[SUCCESS] Magic string encoded successfully.
+[SUCCESS] Secret file extension size encoded successfully.
+[SUCCESS] Secret file extension encoded successfully.
+[SUCCESS] Secret file size encoded successfully.
+[SUCCESS] Secret file data encoded successfully.
+[SUCCESS] successfully copied remaining image data
+[SUCCESS] Encoded successfully
+
+SAMPLE O/P: FOR DECODING.
+1. Decoding
+[SUCCESS] successfully validated
+[SUCCESS] Decoded successfully
+*/
+
+
+
 #include <stdio.h>
 #include "encode.h"
 #include "types.h"
@@ -22,7 +61,6 @@ int main(int argc, char *argv[]) // .aout -e <source_file> <secret_data_file> <o
     {
         printf("Usage: %s -e <src.bmp> <secret.txt> [stego.bmp]\n", argv[0]);
         printf("       %s -d <stego.bmp> [output_file]\n", argv[0]);
-        printf("       %s -d <stego.bmp> <output_file>\n", argv[0]);
         return 0;
     }
 
